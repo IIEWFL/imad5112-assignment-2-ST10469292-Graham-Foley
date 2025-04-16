@@ -39,5 +39,6 @@ class Quiz : AppCompatActivity() {
             "Kylo Ren is Luke Skywalker's son",
             "Rey Skywalker is Emperor Palpatine's granddaughter"
         )
+        val answers = booleanArrayOf(true, true, false, true, false, false, true, true, false, true)
     }
 }
