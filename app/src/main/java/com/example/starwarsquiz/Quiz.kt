@@ -18,6 +18,12 @@ class Quiz : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        questionTxt = findViewById(R.id.questionTxt)
+        trueBtn = findViewById(R.id.trueBtn)
+        falseBtn = findViewById(R.id.falseBtn)
+        resultTxt = findViewById(R.id.resultTxt)
+        nextBtn = findViewById(R.id.nextBtn)
+        exitBtn = findViewById(R.id.exitBtn)
     }
     private var questionIndex = 0
     private var score = 0
