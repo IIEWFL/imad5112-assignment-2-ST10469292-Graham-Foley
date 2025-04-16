@@ -19,5 +19,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val startBtn = findViewById<Button>(R.id.startBtn)
+        val exitBtn = findViewById<Button>(R.id.exitBtn)
     }
 }
