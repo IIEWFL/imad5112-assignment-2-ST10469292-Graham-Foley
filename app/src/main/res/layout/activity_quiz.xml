@@ -21,7 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="100sp"
         android:orientation="horizontal"
-        android:layout_marginBottom="15sp"
         android:gravity="center">
 
         <Button
@@ -40,6 +39,14 @@
             android:text="False" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/resultTxt"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:gravity="center"
+        android:layout_marginBottom="15sp"
+        android:text="text" />
+
     <Button
         android:id="@+id/nextBtn"
         android:layout_width="125sp"
@@ -54,4 +61,5 @@
         android:layout_height="50sp"
         android:textSize="20sp"
         android:text="EXIT" />
+
 </LinearLayout>
