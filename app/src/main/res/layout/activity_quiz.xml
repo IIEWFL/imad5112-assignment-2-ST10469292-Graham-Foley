@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".Quiz">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/questionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:gravity="center"
+        android:layout_marginBottom="25sp"
+        android:text="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15sp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/trueBtn"
+            android:layout_width="125sp"
+            android:layout_height="60sp"
+            android:textSize="20sp"
+            android:layout_marginRight="50sp"
+            android:text="True" />
+
+        <Button
+            android:id="@+id/falseBtn"
+            android:layout_width="125sp"
+            android:layout_height="60sp"
+            android:textSize="20sp"
+            android:text="False" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="125sp"
+        android:layout_height="60sp"
+        android:textSize="20sp"
+        android:layout_marginBottom="100sp"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:textSize="20sp"
+        android:text="EXIT" />
+</LinearLayout>
