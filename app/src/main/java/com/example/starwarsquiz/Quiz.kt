@@ -25,5 +25,19 @@ class Quiz : AppCompatActivity() {
     private lateinit var resultTxt: TextView
     private lateinit var nextBtn: Button
     private lateinit var exitBtn: Button
+
+    companion object {
+        val questions = arrayOf(
+            "Luke Skywalker's father Darth Vader",
+            "Darth Vader is Anakin Skywalker",
+            "Wookiees are from Endor",
+            "General Grievous uses 4 lightsabers",
+            "General Grievous was Force-sensitive",
+            "Count Dooku was always a Sith",
+            "Cal Kestis can sense Force Echoes",
+            "Han Solo was an orphan",
+            "Kylo Ren is Luke Skywalker's son",
+            "Rey Skywalker is Emperor Palpatine's granddaughter"
+        )
     }
 }
