@@ -1,5 +1,6 @@
 package com.example.starwarsquiz
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -26,6 +27,8 @@ class Quiz : AppCompatActivity() {
         exitBtn = findViewById(R.id.exitBtn)
 
         displayQuestion()
+
+        trueBtn.setOnClickListener { checkAnswer(true) }
     }
     private var questionIndex = 0
     private var score = 0
@@ -54,5 +57,20 @@ class Quiz : AppCompatActivity() {
     }
     private fun displayQuestion() {
         questionTxt.text = questions[questionIndex]
+    }
+    private fun checkAnswer(userAnswer: Boolean) {
+        val correctAnswer = answers[questionIndex]
+
+        if (userAnswer == correctAnswer) {
+            resultTxt.text = "Correct"
+            resultTxt.setTextColor(Color.green())
+            score++
+        }
+        else {
+            resultTxt.text = "Incorrect"
+            resultTxt.setTextColor(Color. red())
+        }
+        trueBtn.isEnabled = false
+        falseBtn.isEnabled = false
     }
 }
