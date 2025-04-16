@@ -24,6 +24,8 @@ class Quiz : AppCompatActivity() {
         resultTxt = findViewById(R.id.resultTxt)
         nextBtn = findViewById(R.id.nextBtn)
         exitBtn = findViewById(R.id.exitBtn)
+
+        displayQuestion()
     }
     private var questionIndex = 0
     private var score = 0
@@ -49,5 +51,8 @@ class Quiz : AppCompatActivity() {
             "Rey Skywalker is Emperor Palpatine's granddaughter"
         )
         val answers = booleanArrayOf(true, true, false, true, false, false, true, true, false, true)
+    }
+    private fun displayQuestion() {
+        questionTxt.text = questions[questionIndex]
     }
 }
