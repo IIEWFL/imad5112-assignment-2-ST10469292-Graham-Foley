@@ -19,6 +19,9 @@ class Quiz : AppCompatActivity() {
             insets
         }
     }
+    private var questionIndex = 0
+    private var score = 0
+
     private lateinit var questionTxt: TextView
     private lateinit var trueBtn: Button
     private lateinit var falseBtn: Button
