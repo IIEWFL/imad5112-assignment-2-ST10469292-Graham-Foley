@@ -21,5 +21,10 @@ class MainActivity : AppCompatActivity() {
         }
         val startBtn = findViewById<Button>(R.id.startBtn)
         val exitBtn = findViewById<Button>(R.id.exitBtn)
+        val quizActivity = Intent(this, Quiz::class.java)
+
+        startBtn.setOnClickListener {
+            startActivity(quizActivity)
+        }
     }
 }
