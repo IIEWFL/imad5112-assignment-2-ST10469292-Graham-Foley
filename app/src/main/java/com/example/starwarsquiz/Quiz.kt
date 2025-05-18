@@ -30,9 +30,9 @@ class Quiz : AppCompatActivity() {
 
         displayQuestion()
 
+        nextBtn.isEnabled = false
         trueBtn.setOnClickListener { checkAnswer(true) }
         falseBtn.setOnClickListener { checkAnswer(false) }
-        nextBtn.isEnabled = false
 
         nextBtn.setOnClickListener {
             nextQuestion()
@@ -95,7 +95,7 @@ class Quiz : AppCompatActivity() {
             nextBtn.isEnabled = false
         } else {
             val scoreActivity = Intent(this, Score::class.java)
-            intent.putExtra("score", score)
+            scoreActivity.putExtra("score", score)
             startActivity(scoreActivity)
             finish()
         }

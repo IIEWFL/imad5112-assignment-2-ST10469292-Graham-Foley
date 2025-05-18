@@ -25,18 +25,19 @@ class Score : AppCompatActivity() {
         val reviewBtn = findViewById<Button>(R.id.reviewBtn)
         val restartBtn = findViewById<Button>(R.id.restartBtn)
         val exitBtn = findViewById<Button>(R.id.exitBtn)
+
         val quizActivity = Intent(this, Quiz::class.java)
         val reviewActivity = Intent(this, Review::class.java)
 
-        val score = intent.getIntExtra("score",0)
+        val score = intent.getIntExtra("score", 0)
         scoreTxt.text = "Score: $score/10"
 
-        val feedback = if (score >= 5) {
-            "Good Job!"
+        val feedback = if (score >= 9) {
+            "Excellent!"
         }
         else {
-            if (score >= 9) {
-                "Excellent!"
+            if (score >= 5) {
+                "Good Job!"
             } else {
                 if (score == 0) {
                     "Better Luck Next Time"
