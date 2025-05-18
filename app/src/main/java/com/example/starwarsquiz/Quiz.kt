@@ -35,19 +35,7 @@ class Quiz : AppCompatActivity() {
         nextBtn.isEnabled = false
 
         nextBtn.setOnClickListener {
-            questionIndex++
-            if (questionIndex < questions.size) {
-                displayQuestion()
-                resultTxt.text = ""
-                trueBtn.isEnabled = true
-                falseBtn.isEnabled = true
-                nextBtn.isEnabled = false
-            } else {
-                val scoreActivity = Intent(this, Score::class.java)
-                intent.putExtra("score", score)
-                startActivity(scoreActivity)
-                finish()
-            }
+            nextQuestion()
         }
         exitBtn.setOnClickListener {
             exitProcess(0)
@@ -96,5 +84,20 @@ class Quiz : AppCompatActivity() {
         trueBtn.isEnabled = false
         falseBtn.isEnabled = false
         nextBtn.isEnabled = true
+    }
+    private fun nextQuestion() {
+        questionIndex++
+        if (questionIndex < questions.size) {
+            displayQuestion()
+            resultTxt.text = ""
+            trueBtn.isEnabled = true
+            falseBtn.isEnabled = true
+            nextBtn.isEnabled = false
+        } else {
+            val scoreActivity = Intent(this, Score::class.java)
+            intent.putExtra("score", score)
+            startActivity(scoreActivity)
+            finish()
+        }
     }
 }
