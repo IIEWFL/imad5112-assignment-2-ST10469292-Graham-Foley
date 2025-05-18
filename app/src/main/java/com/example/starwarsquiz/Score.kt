@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.system.exitProcess
 
 class Score : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +49,9 @@ class Score : AppCompatActivity() {
         restartBtn.setOnClickListener {
                 startActivity(quizActivity)
                 finish()
+        }
+        exitBtn.setOnClickListener {
+            exitProcess(0)
         }
     }
 }
