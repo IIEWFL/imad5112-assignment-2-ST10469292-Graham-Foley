@@ -1,5 +1,6 @@
 package com.example.starwarsquiz
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -23,6 +24,7 @@ class Score : AppCompatActivity() {
         val reviewBtn = findViewById<Button>(R.id.reviewBtn)
         val restartBtn = findViewById<Button>(R.id.restartBtn)
         val exitBtn = findViewById<Button>(R.id.exitBtn)
+        val quizActivity = Intent(this, Quiz::class.java)
 
         val score = intent.getIntExtra("score",0)
         scoreTxt.text = "Score: $score/10"
@@ -42,5 +44,10 @@ class Score : AppCompatActivity() {
             }
         }
         feedbackTxt.text = feedback
+
+        restartBtn.setOnClickListener {
+                startActivity(quizActivity)
+                finish()
+        }
     }
 }
