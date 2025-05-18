@@ -26,5 +26,21 @@ class Score : AppCompatActivity() {
 
         val score = intent.getIntExtra("score",0)
         scoreTxt.text = "Score: $score/10"
+
+        val feedback = if (score >= 5) {
+            "Good Job!"
+        }
+        else {
+            if (score >= 9) {
+                "Excellent!"
+            } else {
+                if (score == 0) {
+                    "Better Luck Next Time"
+                } else {
+                    "Keep Trying!"
+                }
+            }
+        }
+        feedbackTxt.text = feedback
     }
 }
