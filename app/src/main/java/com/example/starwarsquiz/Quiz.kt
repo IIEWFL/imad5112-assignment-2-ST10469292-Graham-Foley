@@ -1,5 +1,6 @@
 package com.example.starwarsquiz
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
@@ -29,6 +30,24 @@ class Quiz : AppCompatActivity() {
         displayQuestion()
 
         trueBtn.setOnClickListener { checkAnswer(true) }
+        falseBtn.setOnClickListener { checkAnswer(false) }
+        nextBtn.isEnabled = false
+
+        nextBtn.setOnClickListener {
+            questionIndex++
+            if (questionIndex < questions.size) {
+                displayQuestion()
+                resultTxt.text = ""
+                trueBtn.isEnabled = true
+                falseBtn.isEnabled = true
+                nextBtn.isEnabled = false
+            } else {
+                val scoreActivity = Intent(this, Score::class.java)
+                intent.putExtra("score", score)
+                startActivity(scoreActivity)
+                finish()
+            }
+        }
     }
     private var questionIndex = 0
     private var score = 0
@@ -42,7 +61,7 @@ class Quiz : AppCompatActivity() {
 
     companion object {
         val questions = arrayOf(
-            "Luke Skywalker's father Darth Vader",
+            "Darth Vader is Luke Skywalker's father",
             "Darth Vader is Anakin Skywalker",
             "Wookiees are from Endor",
             "General Grievous uses 4 lightsabers",
@@ -63,14 +82,15 @@ class Quiz : AppCompatActivity() {
 
         if (userAnswer == correctAnswer) {
             resultTxt.text = "Correct"
-            resultTxt.setTextColor(Color.green())
+            resultTxt.setTextColor(Color.GREEN)
             score++
         }
         else {
             resultTxt.text = "Incorrect"
-            resultTxt.setTextColor(Color. red())
+            resultTxt.setTextColor(Color.RED)
         }
         trueBtn.isEnabled = false
         falseBtn.isEnabled = false
+        nextBtn.isEnabled = true
     }
 }
