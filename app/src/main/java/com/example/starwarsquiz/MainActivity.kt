@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         startBtn.setOnClickListener {
             startActivity(quizActivity)
+            finish()
         }
         exitBtn.setOnClickListener {
             exitProcess(0)

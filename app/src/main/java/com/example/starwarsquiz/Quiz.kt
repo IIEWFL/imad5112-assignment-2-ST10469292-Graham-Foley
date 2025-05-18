@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.system.exitProcess
 
 class Quiz : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +48,9 @@ class Quiz : AppCompatActivity() {
                 startActivity(scoreActivity)
                 finish()
             }
+        }
+        exitBtn.setOnClickListener {
+            exitProcess(0)
         }
     }
     private var questionIndex = 0
