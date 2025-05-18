@@ -26,6 +26,7 @@ class Score : AppCompatActivity() {
         val restartBtn = findViewById<Button>(R.id.restartBtn)
         val exitBtn = findViewById<Button>(R.id.exitBtn)
         val quizActivity = Intent(this, Quiz::class.java)
+        val reviewActivity = Intent(this, Review::class.java)
 
         val score = intent.getIntExtra("score",0)
         scoreTxt.text = "Score: $score/10"
@@ -46,6 +47,10 @@ class Score : AppCompatActivity() {
         }
         feedbackTxt.text = feedback
 
+        reviewBtn.setOnClickListener {
+            startActivity(reviewActivity)
+            finish()
+        }
         restartBtn.setOnClickListener {
                 startActivity(quizActivity)
                 finish()
