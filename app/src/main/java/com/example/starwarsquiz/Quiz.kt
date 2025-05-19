@@ -38,6 +38,7 @@ class Quiz : AppCompatActivity() {
             nextQuestion()
         }
         exitBtn.setOnClickListener {
+            finishAffinity()
             exitProcess(0)
         }
     }

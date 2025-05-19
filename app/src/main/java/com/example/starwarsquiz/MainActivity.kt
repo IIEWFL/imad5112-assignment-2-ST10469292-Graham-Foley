@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
         exitBtn.setOnClickListener {
+            finishAffinity()
             exitProcess(0)
         }
     }
