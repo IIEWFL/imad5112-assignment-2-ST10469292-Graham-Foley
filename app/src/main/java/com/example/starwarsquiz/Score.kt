@@ -29,6 +29,7 @@ class Score : AppCompatActivity() {
         val quizActivity = Intent(this, Quiz::class.java)
         val reviewActivity = Intent(this, Review::class.java)
 
+        //Get score
         val score = intent.getIntExtra("score", 0)
         scoreTxt.text = "Score: $score/10"
 
@@ -46,16 +47,20 @@ class Score : AppCompatActivity() {
                 }
             }
         }
+        //Display feedback
         feedbackTxt.text = feedback
 
+        //Switch to reviewActivity
         reviewBtn.setOnClickListener {
             startActivity(reviewActivity)
             finish()
         }
+        //Switch to quizActivity
         restartBtn.setOnClickListener {
                 startActivity(quizActivity)
                 finish()
         }
+        //Exit program
         exitBtn.setOnClickListener {
             finishAffinity()
             exitProcess(0)

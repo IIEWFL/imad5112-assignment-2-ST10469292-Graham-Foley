@@ -30,20 +30,26 @@ class Review : AppCompatActivity() {
         val answers = intent.getBooleanArrayExtra("answers")
 
         val reviewText = StringBuilder()
+        //Determine if questions array size equals answers array size
         if (questions != null && answers != null && questions.size == answers.size) {
+            //Set questions with answers in reviewText
             for (i in questions.indices) {
                 reviewText.append("${i + 1}. ${questions[i]}\n")
                 reviewText.append("Answer: ${if (answers[i]) "True" else "False"}\n\n")
             }
+            //Display questions with answers
             reviewTxt.text = reviewText.toString()
         }
         else {
+            //Display error if error occurs
             reviewTxt.text = "Error loading review data."
         }
+        //Switch to quizActivity
         restartBtn.setOnClickListener {
             startActivity(quizActivity)
             finish()
         }
+        //Exit program
         exitBtn.setOnClickListener {
             finishAffinity()
             exitProcess(0)
