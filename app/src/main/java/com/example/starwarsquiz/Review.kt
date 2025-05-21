@@ -52,7 +52,6 @@ class Review : AppCompatActivity() {
         //Exit program
         exitBtn.setOnClickListener {
             finishAffinity()
-            exitProcess(0)
         }
     }
 }

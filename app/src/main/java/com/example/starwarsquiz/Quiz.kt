@@ -44,7 +44,6 @@ class Quiz : AppCompatActivity() {
         //Exit program
         exitBtn.setOnClickListener {
             finishAffinity()
-            exitProcess(0)
         }
     }
     private var questionIndex = 0

@@ -63,7 +63,6 @@ class Score : AppCompatActivity() {
         //Exit program
         exitBtn.setOnClickListener {
             finishAffinity()
-            exitProcess(0)
         }
     }
 }
