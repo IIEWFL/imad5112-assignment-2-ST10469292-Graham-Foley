@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/star_wars_quiz_background_4"
+    android:background="@drawable/star_wars_quiz_background_1"
     tools:context=".MainActivity">
 
     <TextView
@@ -57,9 +57,9 @@
     <Button
         android:id="@+id/startBtn"
         android:layout_width="150sp"
-        android:layout_height="50sp"
-        android:textSize="22sp"
-        android:layout_marginBottom="100sp"
+        android:layout_height="60sp"
+        android:textSize="25sp"
+        android:layout_marginBottom="70sp"
         android:backgroundTint="@color/green"
         android:textColor="@color/black"
         android:text="Start" />
@@ -67,8 +67,8 @@
     <Button
         android:id="@+id/exitBtn"
         android:layout_width="150sp"
-        android:layout_height="50sp"
-        android:textSize="20sp"
+        android:layout_height="60sp"
+        android:textSize="22sp"
         android:backgroundTint="@color/red"
         android:text="EXIT" />
 </LinearLayout>

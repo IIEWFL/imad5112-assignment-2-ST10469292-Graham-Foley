@@ -23,16 +23,19 @@
 
     <Button
         android:id="@+id/restartBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150sp"
+        android:layout_height="60sp"
+        android:textSize="23sp"
         android:backgroundTint="@color/blue"
         android:textColor="@color/black"
+        android:layout_marginBottom="70sp"
         android:text="Restart" />
 
     <Button
         android:id="@+id/exitBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150sp"
+        android:layout_height="60sp"
+        android:textSize="22sp"
         android:backgroundTint="@color/red"
         android:text="EXIT" />
 </LinearLayout>
