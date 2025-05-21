@@ -21,7 +21,7 @@ class Score : AppCompatActivity() {
             insets
         }
         val scoreTxt = findViewById<TextView>(R.id.scoreTxt)
-        val feedbackTxt = findViewById<TextView>(R.id.feedbackTxt)
+        val resultsTxt = findViewById<TextView>(R.id.resultsTxt)
         val reviewBtn = findViewById<Button>(R.id.reviewBtn)
         val restartBtn = findViewById<Button>(R.id.restartBtn)
         val exitBtn = findViewById<Button>(R.id.exitBtn)
@@ -33,7 +33,7 @@ class Score : AppCompatActivity() {
         val score = intent.getIntExtra("score", 0)
         scoreTxt.text = "Score: $score/10"
 
-        val feedback = if (score >= 9) {
+        val results = if (score >= 9) {
             "Excellent!"
         }
         else {
@@ -48,7 +48,7 @@ class Score : AppCompatActivity() {
             }
         }
         //Display feedback
-        feedbackTxt.text = feedback
+        resultsTxt.text = results
 
         //Switch to reviewActivity
         reviewBtn.setOnClickListener {
