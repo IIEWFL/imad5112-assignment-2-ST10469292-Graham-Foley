@@ -61,6 +61,7 @@
         android:textSize="22sp"
         android:layout_marginBottom="100sp"
         android:backgroundTint="@color/green"
+        android:textColor="@color/black"
         android:text="Start" />
 
     <Button

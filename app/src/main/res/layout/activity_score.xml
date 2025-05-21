@@ -39,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
+        android:textColor="@color/black"
         android:text="Review" />
 
     <Button
@@ -46,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/blue"
+        android:textColor="@color/black"
         android:text="Restart" />
 
     <Button
