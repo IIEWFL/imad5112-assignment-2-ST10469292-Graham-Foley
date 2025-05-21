@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/star_wars_quiz_background_4"
     tools:context=".MainActivity">
 
     <TextView
@@ -17,6 +18,11 @@
         android:textSize="45sp"
         android:gravity="center"
         android:layout_marginBottom="25sp"
+        android:textColor="@color/yellow"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="Star Wars Quiz" />
 
     <TextView
@@ -27,23 +33,34 @@
         android:textStyle="italic"
         android:textSize="25sp"
         android:layout_marginBottom="100sp"
+        android:textColor="@color/yellow"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="Welcome to the Star Wars Quiz!"/>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="35sp"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_marginBottom="10sp"
+        android:textColor="@color/yellow"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
         android:text="Would you like to start?" />
 
     <Button
         android:id="@+id/startBtn"
         android:layout_width="150sp"
         android:layout_height="50sp"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:layout_marginBottom="100sp"
+        android:backgroundTint="@color/green"
         android:text="Start" />
 
     <Button
@@ -51,5 +68,6 @@
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:textSize="20sp"
+        android:backgroundTint="@color/red"
         android:text="EXIT" />
 </LinearLayout>
