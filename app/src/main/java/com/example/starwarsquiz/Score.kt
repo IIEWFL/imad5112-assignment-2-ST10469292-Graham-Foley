@@ -50,15 +50,19 @@ class Score : AppCompatActivity() {
         //Display feedback
         resultsTxt.text = results
 
-        //Switch to reviewActivity
+        //Switch to Review
         reviewBtn.setOnClickListener {
+            //Get questions from Quiz and put into Review
+            reviewActivity.putExtra("questions", intent.getStringArrayExtra("questions"))
+            //Get answers from Quiz and put into Review
+            reviewActivity.putExtra("answers", intent.getBooleanArrayExtra("answers"))
             startActivity(reviewActivity)
             finish()
         }
-        //Switch to quizActivity
+        //Switch to Quiz
         restartBtn.setOnClickListener {
-                startActivity(quizActivity)
-                finish()
+            startActivity(quizActivity)
+            finish()
         }
         //Exit program
         exitBtn.setOnClickListener {

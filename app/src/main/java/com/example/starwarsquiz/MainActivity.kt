@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val exitBtn = findViewById<Button>(R.id.exitBtn)
         val quizActivity = Intent(this, Quiz::class.java)
 
-        //Switch to quizActivity
+        //Switch to Quiz
         startBtn.setOnClickListener {
             startActivity(quizActivity)
             finish()

@@ -113,9 +113,13 @@ class Quiz : AppCompatActivity() {
             nextBtn.isEnabled = false
         } else {
             val scoreActivity = Intent(this, Score::class.java)
-            //Put score into scoreActivity
+            //Put score into Score
             scoreActivity.putExtra("score", score)
-            //Switch to scoreActivity
+            //Put questions into Score
+            scoreActivity.putExtra("questions", questions)
+            //Put answers into Score
+            scoreActivity.putExtra("answers", answers)
+            //Switch to Score
             startActivity(scoreActivity)
             finish()
         }

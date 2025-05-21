@@ -26,7 +26,9 @@ class Review : AppCompatActivity() {
 
         val quizActivity = Intent(this, Quiz::class.java)
 
+        //Get questions from Score
         val questions = intent.getStringArrayExtra("questions")
+        //Get answers from Score
         val answers = intent.getBooleanArrayExtra("answers")
 
         val reviewText = StringBuilder()
@@ -44,7 +46,7 @@ class Review : AppCompatActivity() {
             //Display error if error occurs
             reviewTxt.text = "Error loading review data."
         }
-        //Switch to quizActivity
+        //Switch to Quiz
         restartBtn.setOnClickListener {
             startActivity(quizActivity)
             finish()
